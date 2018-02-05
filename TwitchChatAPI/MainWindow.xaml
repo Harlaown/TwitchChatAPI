@@ -1,0 +1,32 @@
+﻿<Window x:Class="TwitchChatAPI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TwitchChatAPI"
+        mc:Ignorable="d"
+        Name="ChatTwitch" ResizeMode="NoResize" Title="MainWindow" Height="340" Width="520" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="370*" />
+            <ColumnDefinition Width="140*" />
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            <RichTextBox IsDocumentEnabled="True" IsReadOnly="True"  Name="ChatBox" HorizontalAlignment="Left" Height="250" Margin="10,10,0,0" VerticalAlignment="Top" Width="350" Background="White" TextChanged="ChatBox_SourceUpdated" PreviewMouseDown="ChatBox_MouseDown"  />
+            <Button HorizontalAlignment="Left"  Width="350" Height="20" Name="EndChatBtn" Content="Go to end chat..." Margin="10,0,10,0" Click="EndChatBtn_Click"/>
+            <TextBox  x:Name="BotChatMessage" Width="350" Height="20" Text="Message Bot..."  GotFocus="BotChatMessage_GotFocus" LostFocus="BotChatMessage_LostFocus" KeyDown="BotChatMessage_KeyDown" Margin="10,0,0,0" HorizontalAlignment="Left" />
+
+
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="0" >
+
+            <Label HorizontalContentAlignment="Left" Height="31" x:Name="ViewerLabel" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" FontFamily="Arial Black" FontWeight="Bold"/>
+            <ListBox x:Name="ViewerList"  Height="229"  Width="121" Margin="10,0,0,0" HorizontalAlignment="Left" />
+            <Label Name="EmoticonName" Content="Label" Margin="10,0,11,0"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
+
