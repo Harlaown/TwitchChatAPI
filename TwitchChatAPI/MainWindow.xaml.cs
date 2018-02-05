@@ -30,15 +30,15 @@ namespace TwitchChatAPI
         #region AccountInfomation
 
         //Your user name in twitch.com
-        private const string UserName = @"fateorigami";
+        private const string UserName = @"";
 
         //Get IT in https://twitchapps.com/tmi/
-        private const string Password = @"oauth:82sy3n1cbxuieiwuhfrebeqlve6c5g";
+        private const string Password = @"";
 
         //Channle Twitch ID
-        private const string Channel = @"fateorigami";
+        private const string Channel = @"";
 
-        private const string TwitchClientId = @"1acttnz1ktm31vrezzhczeaf0hq16n";
+        private const string TwitchClientId = @"";
 
         #endregion
 
